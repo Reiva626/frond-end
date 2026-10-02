@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animasi untuk Background Melayang */
+@keyframes float {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-float-1 { animation: float 12s ease-in-out infinite; }
+.animate-float-2 { animation: float 15s ease-in-out infinite reverse; }
+
+/* Card yang Luwes dan Bersinar saat di-hover */
+.fluid-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fluid-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(56, 189, 248, 0.15);
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Input Form yang Empuk */
+.soft-input {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.soft-input:focus {
+  background: rgba(17, 24, 39, 0.9);
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
+  outline: none;
+}
